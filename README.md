@@ -5,8 +5,8 @@ Three-part test project covering UI automation, load testing, and API testing.
 ## Run it
 
 ```bash
-git clone https://github.com/feceugur/qa-case-study.git
-cd qa-case-study
+git clone https://github.com/feceugur/fuldenece_ugur_case.git
+cd fuldenece_ugur_case
 python3 -m pip install -r requirements.txt
 python3 run_all_tests.py
 ```
