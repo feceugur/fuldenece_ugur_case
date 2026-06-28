@@ -1,12 +1,12 @@
-# InsiderOne QA Engineer Assessment
+# QA Engineer Assessment
 
 Three-part test project covering UI automation, load testing, and API testing.
 
 ## Run it
 
 ```bash
-git clone <this-repo-url>
-cd CaseStudy
+git clone https://github.com/feceugur/qa-case-study.git
+cd qa-case-study
 pip install -r requirements.txt
 python run_all_tests.py
 ```
@@ -69,7 +69,7 @@ rejected, and reworked.
 
 ```
 CaseStudy/
-├── ui_tests/                     # Task 1 — UI automation (insiderone.com)
+├── ui_tests/                     # Task 1 — UI automation (target site under test)
 │   ├── features/                # Gherkin BDD scenarios
 │   │   ├── home_page.feature
 │   │   ├── careers.feature
@@ -114,7 +114,7 @@ CaseStudy/
 use. The commands below are for running one task/scenario at a time during
 development — they assume dependencies are already installed.
 
-### Task 1 — UI Tests (insiderone.com)
+### Task 1 — UI Tests
 ```bash
 # All BDD scenarios
 pytest ui_tests/step_defs/ -v

@@ -109,7 +109,7 @@ def run_ui_tests() -> dict:
         *PYTEST_CMD, "ui_tests/step_defs/", "-v",
         f"--junitxml={REPORTS_DIR / 'ui_results.xml'}",
         f"--html={REPORTS_DIR / 'ui_report.html'}", "--self-contained-html",
-    ], "TASK 1 — UI Tests (insiderone.com)")
+    ], "TASK 1 — UI Tests")
     stats = parse_junit(REPORTS_DIR / "ui_results.xml")
     known_bugs = bug_tagged_scenarios(ROOT / "ui_tests" / "step_defs")
     stats["known_bug_failures"] = [f for f in stats["failed"] if f in known_bugs]

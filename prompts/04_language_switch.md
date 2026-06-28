@@ -1,11 +1,11 @@
-# Prompt Iteration 04 — Language Switch + Navigation Persistence (insiderone.com)
+# Prompt Iteration 04 — Language Switch + Navigation Persistence
 
 This is the required **AI-Augmented Sub-Scenario** for Task 1, plus one
 revision requested after the first round. Two iterations are logged below.
 
 ### Why this scenario, and not a contact-form test
 An earlier draft of this sub-scenario (since removed) targeted a contact /
-demo-request form on insiderone.com. That idea was dropped once it was
+demo-request form on the target site. That idea was dropped once it was
 checked against the actual current homepage: there is no inline contact
 form — "Get a demo" is just a link to elsewhere, and its visibility is
 already covered by an existing scenario. There was nothing distinct left to
@@ -31,14 +31,14 @@ not just its presence.
   AJAX content swap? modal?) — this had to be investigated live, not guessed.
 
 ### Prompt
-> "Add a UI test scenario for insiderone.com's language switcher that
+> "Add a UI test scenario for the target site's language switcher that
 > actually clicks a locale option (not just checks it's listed) and verifies
 > the switch took effect. Investigate the live site first to find out what
 > 'took effect' should mean — don't assume the mechanism."
 
 ### Investigation (before writing any assertion)
 - Opening the switcher and clicking "Français" navigates to
-  `https://insiderone.com/fr/` (full navigation, not an AJAX swap) — the
+  the site's `/fr/` path (full navigation, not an AJAX swap) — the
   `<title>` and `<h1>` are translated server-side.
 - `get_by_text(locale, exact=True)` matches **two** elements per locale
   (a desktop and a mobile nav variant); `.first` is not guaranteed to be the
