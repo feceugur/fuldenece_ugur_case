@@ -11,16 +11,6 @@ pip install -r requirements.txt
 python run_all_tests.py
 ```
 
-That's it — no virtualenv to create, no separate Playwright install step.
-`pip install` pulls every Python dependency; `run_all_tests.py` downloads
-the Playwright Chromium binary itself on first run (it's a one-time, ~150MB
-download that `pip` alone can't do), then runs all three tasks (UI, load,
-API) and writes a consolidated report to `reports/SUMMARY.md`.
-
-If you'd rather isolate this in a virtualenv first, that still works exactly
-the same way — `python3 -m venv .venv && source .venv/bin/activate` before
-the two commands above — it's just not required.
-
 Useful variants:
 ```bash
 python run_all_tests.py --skip-load          # UI + API only, fast
