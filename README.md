@@ -7,14 +7,17 @@ Three-part test project covering UI automation, load testing, and API testing.
 ```bash
 git clone https://github.com/feceugur/qa-case-study.git
 cd qa-case-study
-pip install -r requirements.txt
-python run_all_tests.py
+python3 -m pip install -r requirements.txt
+python3 run_all_tests.py
 ```
+
+`python3 -m pip` (not bare `pip`) keeps the install and the run on the same
+interpreter on machines with more than one Python installed.
 
 Useful variants:
 ```bash
-python run_all_tests.py --skip-load          # UI + API only, fast
-python run_all_tests.py --load-duration 30s  # shorter load test
+python3 run_all_tests.py --skip-load          # UI + API only, fast
+python3 run_all_tests.py --load-duration 30s  # shorter load test
 ```
 
 ## How This Was Built

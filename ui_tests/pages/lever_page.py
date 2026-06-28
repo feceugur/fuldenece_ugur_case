@@ -1,4 +1,6 @@
 import re
+from typing import Optional
+
 from playwright.sync_api import Page, Locator
 
 
@@ -38,7 +40,7 @@ class LeverPage:
     def apply_button(self, posting: Locator) -> Locator:
         return posting.locator("[data-qa='btn-apply'] a")
 
-    def first_istanbul_posting(self) -> Locator | None:
+    def first_istanbul_posting(self) -> Optional[Locator]:
         for posting in self.all_postings():
             if "ISTANBUL" in self.posting_location(posting).upper():
                 return posting

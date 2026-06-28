@@ -39,6 +39,7 @@ to these choices):
 """
 import random
 import re
+from typing import Optional
 
 from locust import HttpUser, task, between
 
@@ -103,7 +104,7 @@ class N11SearchUser(HttpUser):
             return False
         return True
 
-    def _extract_total_count(self, html: str) -> int | None:
+    def _extract_total_count(self, html: str) -> Optional[int]:
         match = TOTAL_COUNT_RE.search(html)
         return int(match.group(1)) if match else None
 
