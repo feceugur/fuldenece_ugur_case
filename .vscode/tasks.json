@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Load Test — Locust (1 user)",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/bin/locust",
+      "args": [
+        "-f", "load_tests/locustfile.py",
+        "--headless",
+        "-u", "1",
+        "-r", "1",
+        "--run-time", "60s",
+        "--host", "https://www.n11.com"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

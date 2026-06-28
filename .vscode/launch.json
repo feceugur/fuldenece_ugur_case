@@ -1,0 +1,95 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "UI Tests — Headless (tümü)",
+      "type": "debugpy",
+      "request": "launch",
+      "python": "${workspaceFolder}/.venv/bin/python3.13",
+      "module": "pytest",
+      "args": ["ui_tests/step_defs/", "-v", "-s"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "VIRTUAL_ENV": "${workspaceFolder}/.venv",
+        "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}"
+      },
+      "justMyCode": true
+    },
+    {
+      "name": "UI Tests — Headed (görünür, tümü)",
+      "type": "debugpy",
+      "request": "launch",
+      "python": "${workspaceFolder}/.venv/bin/python3.13",
+      "module": "pytest",
+      "args": ["ui_tests/step_defs/", "-v", "-s", "--headed"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "VIRTUAL_ENV": "${workspaceFolder}/.venv",
+        "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}"
+      },
+      "justMyCode": true
+    },
+    {
+      "name": "UI Tests — Headed (aktif dosya)",
+      "type": "debugpy",
+      "request": "launch",
+      "python": "${workspaceFolder}/.venv/bin/python3.13",
+      "module": "pytest",
+      "args": ["${file}", "-v", "-s", "--headed"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "VIRTUAL_ENV": "${workspaceFolder}/.venv",
+        "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}"
+      },
+      "justMyCode": true
+    },
+    {
+      "name": "UI Tests — Headed (smoke marker)",
+      "type": "debugpy",
+      "request": "launch",
+      "python": "${workspaceFolder}/.venv/bin/python3.13",
+      "module": "pytest",
+      "args": ["ui_tests/step_defs/", "-v", "-s", "--headed", "-m", "smoke"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "VIRTUAL_ENV": "${workspaceFolder}/.venv",
+        "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}"
+      },
+      "justMyCode": true
+    },
+    {
+      "name": "UI Tests — Headed (bug marker)",
+      "type": "debugpy",
+      "request": "launch",
+      "python": "${workspaceFolder}/.venv/bin/python3.13",
+      "module": "pytest",
+      "args": ["ui_tests/step_defs/", "-v", "-s", "--headed", "-m", "bug"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "VIRTUAL_ENV": "${workspaceFolder}/.venv",
+        "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}"
+      },
+      "justMyCode": true
+    },
+    {
+      "name": "API Tests",
+      "type": "debugpy",
+      "request": "launch",
+      "python": "${workspaceFolder}/.venv/bin/python3.13",
+      "module": "pytest",
+      "args": ["api_tests/", "-v", "-s"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "VIRTUAL_ENV": "${workspaceFolder}/.venv",
+        "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}"
+      },
+      "justMyCode": true
+    }
+  ]
+}
