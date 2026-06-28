@@ -11,9 +11,6 @@ python3 -m pip install -r requirements.txt
 python3 run_all_tests.py
 ```
 
-`python3 -m pip` (not bare `pip`) keeps the install and the run on the same
-interpreter on machines with more than one Python installed.
-
 Useful variants:
 ```bash
 python3 run_all_tests.py --skip-load          # UI + API only, fast
